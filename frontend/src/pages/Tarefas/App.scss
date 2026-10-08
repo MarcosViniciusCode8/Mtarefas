@@ -1,0 +1,224 @@
+
+.container-tarefas {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #01337f;
+
+    .cadastro {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 30px auto;
+        padding: 25px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h2 {
+                font-size: 26px;
+                color: #222222;
+                margin: 0 0 10px 0;
+            }
+
+            div {
+                display: flex;
+                gap: 15px;
+                width: 100%;
+            }
+
+            input {
+                min-width: 0;
+                flex: 1;
+                width: 100%;
+                height: 45px;
+                padding: 0 12px;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+                font-size: 14px;
+                outline: none;
+                box-sizing: border-box;
+
+                &:focus {
+                    border-color: #0242a4;
+                }
+            }
+
+            div:nth-of-type(1) {
+                input:nth-child(1) {
+                    flex: 2;
+                }
+            }
+
+            div:nth-of-type(3) {
+                input {
+                    height: 100px;
+                }
+
+                button {
+                    flex: 0.5;
+                    min-width: 100px;
+                    height: 45px;
+                    background-color: #0242a4;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: #01337f;
+                    }
+                }
+            }
+        }
+    }
+
+.tarefas {
+    width: 100%;
+    max-width: 900px;
+    min-height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+.card-licao {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+            width: calc(50% - 10px);
+        box-sizing: border-box;
+
+    .cabecalho-licao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dddddd;
+
+        h2 {
+            font-size: 22px;
+            color: #0242a4;
+            margin: 0;
+        }
+
+        span {
+            font-size: 13px;
+            color: #666666;
+        }
+    }
+
+    .paginas {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding: 15px 15px;
+        background-color: #b4b4b4;
+        border-radius: 6px;
+
+        p {
+            font-size: 14px;
+            color: #444444;
+            margin: 0;
+        }
+    }
+
+    .conteudo-licao {
+        min-height: 100px;
+        padding: 12px;
+        border: 1px solid #dddddd;
+        border-radius: 6px;
+        background-color: #b4b4b4;
+        overflow-wrap: anywhere;
+
+        h3 {
+            font-size: 16px;
+            color: #222222;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555555;
+            margin: 0;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .card-licao {
+        max-width: 100%;
+        padding: 15px;
+
+        .cabecalho-licao {
+            align-items: flex-start;
+            flex-direction: column;
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        .paginas {
+            flex-direction: column;
+        }
+    }
+}
+    }
+}
+
+@media (max-width: 600px) {
+    .container-tarefas {
+        padding: 15px;
+
+        .cadastro {
+            padding: 20px;
+
+            form {
+                h2 {
+                    font-size: 23px;
+                }
+
+                div {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                input {
+                    flex: auto;
+                }
+
+                div:nth-of-type(3) {
+                    button {
+                        width: 100%;
+                        flex: auto;
+                    }
+                }
+            }
+        }
+
+        .tarefas {
+            flex-direction: column;
+        }
+    }
+}

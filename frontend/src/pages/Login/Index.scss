@@ -1,0 +1,147 @@
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0242a4;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .login {
+        width: 100%;
+        max-width: 420px;
+        padding: 90px 40px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 100%;
+
+            h1 {
+                font-size: 32px;
+                text-align: center;
+                color: #222222;
+                margin: 0;
+
+                span {
+                    color: #0242a4;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                color: #666666;
+                text-align: center;
+                margin: 0;
+            }
+
+            input {
+                width: 100%;
+                height: 48px;
+                padding: 0 15px;
+                border: 1px solid #dddddd;
+                border-radius: 8px;
+                outline: none;
+                font-size: 15px;
+                box-sizing: border-box;
+                transition: 0.3s;
+
+                &:focus {
+                    border-color: #0242a4;
+                    box-shadow: 0 0 5px rgba(2, 66, 164, 0.2);
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 48px;
+                border: none;
+                border-radius: 8px;
+                background-color: #0242a4;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #01337f;
+                }
+            }
+
+            .cadastro {
+                font-size: 14px;
+                margin-top: 5px;
+
+                span {
+                    a {
+                        color: #0242a4;
+                        font-weight: bold;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container-login {
+        padding: 25px;
+
+        .login {
+            max-width: 400px;
+            padding: 30px;
+        }
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .container-login {
+        padding: 15px;
+
+        .login {
+            padding: 25px 20px;
+            border-radius: 12px;
+
+            form {
+                gap: 15px;
+
+                h1 {
+                    font-size: 27px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                input {
+                    height: 45px;
+                    font-size: 14px;
+                }
+
+                button {
+                    height: 45px;
+                    font-size: 15px;
+                }
+
+                .cadastro {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
