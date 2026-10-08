@@ -4,12 +4,12 @@
     min-height: 100vh;
     padding: 30px;
     box-sizing: border-box;
-    background-color: #01337f;
+    background-color: #f5f6fa;
 
     .cadastro {
         width: 100%;
         max-width: 900px;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 35px;
         padding: 25px;
         background-color: #ffffff;
         border: 1px solid #dddddd;
@@ -18,15 +18,14 @@
         box-sizing: border-box;
 
         form {
-            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 15px;
 
             h2 {
+                margin: 0 0 10px;
                 font-size: 26px;
                 color: #222222;
-                margin: 0 0 10px 0;
             }
 
             div {
@@ -36,8 +35,8 @@
             }
 
             input {
-                min-width: 0;
                 flex: 1;
+                min-width: 0;
                 width: 100%;
                 height: 45px;
                 padding: 0 12px;
@@ -53,18 +52,18 @@
             }
 
             div:nth-of-type(1) {
-                input:nth-child(1) {
+                input:first-child {
                     flex: 2;
                 }
             }
 
             div:nth-of-type(3) {
                 input {
-                    height: 100px;
+                    flex: 2;
                 }
 
                 button {
-                    flex: 0.5;
+                    flex: 1;
                     min-width: 100px;
                     height: 45px;
                     background-color: #0242a4;
@@ -84,106 +83,113 @@
         }
     }
 
-.tarefas {
-    width: 100%;
-    max-width: 900px;
-    min-height: 200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    .lista-tarefas {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
 
-.card-licao {
-    width: 100%;
-    max-width: 450px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    box-sizing: border-box;
-            width: calc(50% - 10px);
-        box-sizing: border-box;
-
-    .cabecalho-licao {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #dddddd;
-
-        h2 {
-            font-size: 22px;
-            color: #0242a4;
-            margin: 0;
-        }
-
-        span {
-            font-size: 13px;
-            color: #666666;
+        > h2 {
+            margin-bottom: 20px;
+            color: #222222;
+            font-size: 25px;
         }
     }
 
-    .paginas {
+    .tarefas {
+        width: 100%;
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 10px;
-        padding: 15px 15px;
-        background-color: #b4b4b4;
-        border-radius: 6px;
-
-        p {
-            font-size: 14px;
-            color: #444444;
-            margin: 0;
-        }
+        align-items: flex-start;
+        gap: 20px;
     }
 
-    .conteudo-licao {
-        min-height: 100px;
-        padding: 12px;
+    .card-licao {
+        width: calc(50% - 10px);
+        padding: 20px;
+        background-color: #ffffff;
         border: 1px solid #dddddd;
-        border-radius: 6px;
-        background-color: #b4b4b4;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
         overflow-wrap: anywhere;
 
-        h3 {
-            font-size: 16px;
-            color: #222222;
-            margin: 0 0 10px 0;
-        }
-
-        p {
-            font-size: 14px;
-            color: #555555;
-            margin: 0;
-            line-height: 1.5;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .card-licao {
-        max-width: 100%;
-        padding: 15px;
-
         .cabecalho-licao {
-            align-items: flex-start;
-            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dddddd;
 
             h2 {
-                font-size: 20px;
+                margin: 0;
+                font-size: 22px;
+                color: #0242a4;
+            }
+
+            span {
+                font-size: 13px;
+                color: #666666;
+                white-space: nowrap;
             }
         }
 
         .paginas {
-            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px 0;
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                color: #444444;
+            }
+        }
+
+        .conteudo-licao {
+            min-height: 100px;
+            padding: 12px;
+            background-color: #f8f9fc;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+
+            h3 {
+                margin: 0 0 10px;
+                font-size: 16px;
+                color: #222222;
+            }
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.5;
+                color: #555555;
+            }
         }
     }
-}
+
+    .mensagem {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0 0;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+        text-align: center;
+
+        &.erro {
+            color: #b42318;
+            background-color: #fee4e2;
+            border: 1px solid #fda29b;
+        }
+
+        &.sucesso {
+            color: #027a48;
+            background-color: #d1fadf;
+            border: 1px solid #6ce9a6;
+        }
     }
 }
 
@@ -217,8 +223,22 @@
             }
         }
 
-        .tarefas {
-            flex-direction: column;
+        .card-licao {
+            width: 100%;
+            padding: 15px;
+
+            .cabecalho-licao {
+                align-items: flex-start;
+                flex-direction: column;
+
+                h2 {
+                    font-size: 20px;
+                }
+            }
+
+            .paginas {
+                flex-direction: column;
+            }
         }
     }
 }
